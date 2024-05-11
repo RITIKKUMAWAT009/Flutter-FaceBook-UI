@@ -1,7 +1,9 @@
 import 'package:facebook_clone/src/common/widgets/menu_custom_elevated_button.dart';
-import 'package:facebook_clone/src/screens/dashboard/your_friend_screen/your_friend_screen.dart';
+import 'package:facebook_clone/src/screens/friends/your_friend_screen/your_friend_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'widgets/full_width_elevated_button.dart';
 import 'widgets/menu_custom_size_drop_down_button.dart';
 import 'widgets/menu_custom_size_elevated_button.dart';
 
@@ -272,33 +274,24 @@ class MenuScreen extends StatelessWidget {
                   const SizedBox(
                     height: 13,
                   ),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          foregroundColor: Colors.black,
-                          backgroundColor: Colors.grey.shade200,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(5),
-                          ),
-                          elevation: 3),
-                      onPressed: () {},
-                      child: const Text("See More"),
-                    ),
-                  ),
+                const  FullWidthElevatedButton(text:"See More"),
                 ],
               ),
             ),
             const SizedBox(height: 10,),
-            const MenuCustomSIzeDropDownButton(text: "Help & support",icon: Icons.help,),
+             const MenuCustomSIzeDropDownButton(text: "Help & support",icon: Icons.help,borderRadius: BorderRadius.only(topLeft: Radius.circular(10),topRight: Radius.circular(10)),),
             const SizedBox(height: 1,),
             const MenuCustomSIzeDropDownButton(text: "Setting & privacy",icon: Icons.settings,),
             const SizedBox(height: 1,),
-            const MenuCustomSIzeDropDownButton(text: "Also From Meta",icon: Icons.apps,),
+            const MenuCustomSIzeDropDownButton(text: "Also From Meta",icon: Icons.apps,borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10),bottomRight: Radius.circular(10))),
+            const SizedBox(height: 10,),
+            const  FullWidthElevatedButton(text:"Log Out"),
+
           ],
         ),
       ),
     );
   }
 }
+
 

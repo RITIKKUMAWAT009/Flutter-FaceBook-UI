@@ -1,8 +1,6 @@
 import 'package:facebook_clone/src/common/widgets/search_filed.dart';
 import 'package:flutter/material.dart';
-
 import '../../../common/widgets/custom_list_tile.dart';
-
 class YourFriendScreen extends StatelessWidget {
   const YourFriendScreen({super.key});
 
@@ -12,22 +10,22 @@ class YourFriendScreen extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {},
-          icon: Icon(Icons.arrow_back_ios),
+          icon: const Icon(Icons.arrow_back_ios),
         ),
-        title: Text(
+        title: const Text(
           "Your Friends",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
-        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.search))],
+        actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search))],
       ),
       body: Column(
         children: [
-          SearchField(hintText: "Search Friends"),
+          const SearchField(hintText: "Search Friends"),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
+              const Row(
                 children: [
                   Text(
                     "200",
@@ -39,7 +37,7 @@ class YourFriendScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              TextButton(onPressed: () {}, child: Text("Sort"))
+              TextButton(onPressed: () {}, child: const Text("Sort"))
             ],
           ),
           Expanded(
@@ -48,7 +46,7 @@ class YourFriendScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Column(
                   children: [
-                    CustomListTile(
+                    const CustomListTile(
                       title: "Mandeep",
                       subTitle: "992499239",
                       imageUrl: "assets/images/profile/img.png",

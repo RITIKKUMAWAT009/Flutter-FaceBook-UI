@@ -3,10 +3,16 @@ import 'widgets/create_story_and_reel.dart';
 import 'widgets/post_bar.dart';
 import 'widgets/story_widget.dart';
 import 'widgets/user_post_section.dart';
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({
     super.key,
   });
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return const SingleChildScrollView(
@@ -55,7 +61,7 @@ class HomeScreen extends StatelessWidget {
           UserPostSection(),
           UserPostSection(),
           UserPostSection(),
-        
+
         ],
       ),
     );

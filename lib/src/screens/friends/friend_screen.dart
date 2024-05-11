@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'your_friend_screen/your_friend_screen.dart';
 
-class DashboardScreen extends StatelessWidget {
-  const DashboardScreen({super.key});
+class FriendScreen extends StatelessWidget {
+  const FriendScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

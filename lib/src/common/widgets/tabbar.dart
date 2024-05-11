@@ -1,11 +1,11 @@
-import 'package:facebook_clone/src/screens/dashboard/friend_screen.dart';
+import 'package:facebook_clone/src/screens/friends/friend_screen.dart';
 import 'package:facebook_clone/src/screens/marketplace/market_place_screen.dart';
 import 'package:facebook_clone/src/screens/menu/menu_screen.dart';
+import 'package:facebook_clone/src/screens/message/message_screen.dart';
 import 'package:facebook_clone/src/screens/notification/notification_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../screens/home/home_screen.dart';
-import '../../screens/message/message_screen.dart';
 import '../../screens/video/video_screen.dart';
 
 class CustomTabBar extends StatefulWidget {
@@ -84,42 +84,93 @@ class _HomeScreenState extends State<CustomTabBar>
         ),
       ),
     ];
-    return Scaffold(
-      key: _scaffoldKey,
-      appBar: AppBar(
-        title: Text(
-          "facebook",
-          style: TextStyle(
-              color: Colors.blue.shade800,
-              fontWeight: FontWeight.w900,
-              fontSize: 25),
-        ),
-        actions: list,
-        bottom: TabBar(
-          physics: const BouncingScrollPhysics(),
-          controller: _tabController,
-          labelColor: Colors.blue.shade900,
-          indicatorColor: Colors.blue.shade900,
-          indicatorSize: TabBarIndicatorSize.tab,
-          indicatorWeight: 3,
-          tabs: topTabs,
-        ),
-      ),
-      body: TabBarView(
-        controller: _tabController,
-        children: const [
-          HomeScreen(),
-          VideoScreen(),
-          MarketPlaceScreen(),
-          DashboardScreen(),
-          NotificationScreen(),
-          MenuScreen(),
-        ],
-      ),
-      endDrawer: Container(
-          width: MediaQuery.of(context).size.width * 1.0,
-          height: MediaQuery.of(context).size.height * 1.0,
-          child: MessageScreen()),
-    );
+
+    return DefaultTabController(
+        length: 6,
+        child: Scaffold(
+          key: _scaffoldKey,
+          body: NestedScrollView(
+            headerSliverBuilder:
+                (BuildContext context, bool innerBoxIsScrolled) {
+              return <Widget>[
+                SliverAppBar(
+                  actions: list,
+                  title: Text(
+                    "facebook",
+                    style: TextStyle(
+                        color: Colors.blue.shade800,
+                        fontWeight: FontWeight.w900,
+                        fontSize: 25),
+                  ),
+                  floating: true,
+                  pinned: true,
+                  snap: true,
+                  bottom: TabBar(
+                    physics: const BouncingScrollPhysics(),
+                    labelColor: Colors.blue.shade900,
+                    indicatorColor: Colors.blue.shade900,
+                    indicatorSize: TabBarIndicatorSize.tab,
+                    indicatorWeight: 3,
+                    tabs: topTabs,
+                  ),
+                ),
+              ];
+            },
+            body: const TabBarView(
+              children: <Widget>[
+                HomeScreen(),
+                VideoScreen(),
+                MarketPlaceScreen(),
+                FriendScreen(),
+                NotificationScreen(),
+                MenuScreen(),
+              ],
+            ),
+          ),
+          endDrawer: SizedBox(
+              height: MediaQuery.of(context).size.height - 80,
+              child: const MessageScreen()),
+        ));
+
+    // return DefaultTabController(
+    //   length: 6,
+    //   child: Scaffold(
+    //     key: _scaffoldKey,
+    //     appBar: AppBar(
+    //       title: Text(
+    //         "facebook",
+    //         style: TextStyle(
+    //             color: Colors.blue.shade800,
+    //             fontWeight: FontWeight.w900,
+    //             fontSize: 25),
+    //       ),
+    //       actions: list,
+    //       bottom: TabBar(
+    //         physics: const BouncingScrollPhysics(),
+    //         controller: _tabController,
+    //         labelColor: Colors.blue.shade900,
+    //         indicatorColor: Colors.blue.shade900,
+    //         indicatorSize: TabBarIndicatorSize.tab,
+    //         indicatorWeight: 3,
+    //         tabs: topTabs,
+    //       ),
+    //     ),
+    //     body: TabBarView(
+    //       controller: _tabController,
+    //       children: const [
+    //         HomeScreen(),
+    //         VideoScreen(),
+    //         MarketPlaceScreen(),
+    //         DashboardScreen(),
+    //         NotificationScreen(),
+    //         MenuScreen(),
+    //       ],
+    //     ),
+    //     endDrawer: Container(
+    //         width: MediaQuery.of(context).size.width * 1.0,
+    //         height: MediaQuery.of(context).size.height * 1.0,
+    //         child: MessageScreen()),
+    //   ),
+    // );
   }
 }
