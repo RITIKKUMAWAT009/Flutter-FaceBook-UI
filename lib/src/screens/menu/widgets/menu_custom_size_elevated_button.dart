@@ -23,12 +23,15 @@ class MenuCustomSIzeElevatedButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
             foregroundColor: Colors.black,
             backgroundColor: Colors.white,
+            surfaceTintColor: Colors.white,
             shadowColor: Colors.grey.shade500,
             elevation: 2,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(5))),
         onPressed: onPressed,
-        child: Align(alignment: Alignment.centerLeft,widthFactor: 12,
+        child: Align(
+          alignment: Alignment.centerLeft,
+          widthFactor: 12,
           child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
@@ -37,7 +40,11 @@ class MenuCustomSIzeElevatedButton extends StatelessWidget {
                   icon,
                   color: iconColor,
                 ),
-                Text(text,maxLines: 2,overflow: TextOverflow.ellipsis,)
+                Text(
+                  text,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                )
               ]),
         ),
       ),

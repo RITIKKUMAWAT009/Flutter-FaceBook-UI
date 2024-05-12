@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.6
   iconsax_flutter: ^1.0.0
   youtube_player_iframe: ^5.1.2
+  icons_plus: ^5.0.0
 
 dev_dependencies:
   flutter_test:

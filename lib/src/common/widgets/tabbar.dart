@@ -94,6 +94,7 @@ class _HomeScreenState extends State<CustomTabBar>
                 (BuildContext context, bool innerBoxIsScrolled) {
               return <Widget>[
                 SliverAppBar(
+                  surfaceTintColor: Colors.white,
                   actions: list,
                   title: Text(
                     "facebook",

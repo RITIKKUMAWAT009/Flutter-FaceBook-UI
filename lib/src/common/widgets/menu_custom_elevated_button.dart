@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MenuCustomElevatedButton extends StatelessWidget {
@@ -7,7 +6,8 @@ class MenuCustomElevatedButton extends StatelessWidget {
     required this.isShowArrowDownButton,
     required this.isShowAddIcon,
     required this.title,
-    required this.textColor,  required this.borderRadius,
+    required this.textColor,
+    required this.borderRadius,
   });
 
   final bool isShowArrowDownButton;
@@ -24,10 +24,10 @@ class MenuCustomElevatedButton extends StatelessWidget {
       child: ElevatedButton(
           onPressed: () {},
           style: ElevatedButton.styleFrom(
+              surfaceTintColor: Colors.white,
               backgroundColor: Colors.white,
               foregroundColor: Colors.black38,
-              shape: RoundedRectangleBorder(
-                  borderRadius: borderRadius)),
+              shape: RoundedRectangleBorder(borderRadius: borderRadius)),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             mainAxisSize: MainAxisSize.max,
@@ -40,11 +40,11 @@ class MenuCustomElevatedButton extends StatelessWidget {
                           size: 35,
                           color: Colors.grey.shade600,
                         )
-                      : CircleAvatar(
+                      : const CircleAvatar(
                           backgroundImage:
                               AssetImage("assets/images/profile/img.png"),
                         ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Text(
@@ -56,9 +56,9 @@ class MenuCustomElevatedButton extends StatelessWidget {
               isShowArrowDownButton
                   ? IconButton(
                       onPressed: () {},
-                      icon: Icon(Icons.keyboard_arrow_down),
+                      icon: const Icon(Icons.keyboard_arrow_down),
                     )
-                  : SizedBox(),
+                  : const SizedBox(),
             ],
           )),
     );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class VideoModel{
+class VideoModel {
   final VoidCallback avatarOnpressed;
   final String avatarimage;
   final String name;
@@ -20,59 +20,57 @@ class VideoModel{
   final String views;
 
   VideoModel({
-
-     required this.avatarOnpressed,
-     this.avatarimage="",
-     this.name="",
-     this.time="",
-     this.space="",
-     required this.moreOnPressed,
-     required this.cutOnPressed,
-     this.VideoTitle="",
-     this.videoid="",
-     required this.likeOnPressed,
-     required this.commentOnpressed,
-     required this.sendOnpressed,
-     required this.shareOnPressed,
-     this.like="",
-     this.comments="",
-     this.shares="",
-     this.views="",
-
+    required this.avatarOnpressed,
+    this.avatarimage = "",
+    this.name = "",
+    this.time = "",
+    this.space = "",
+    required this.moreOnPressed,
+    required this.cutOnPressed,
+    this.VideoTitle = "",
+    this.videoid = "",
+    required this.likeOnPressed,
+    required this.commentOnpressed,
+    required this.sendOnpressed,
+    required this.shareOnPressed,
+    this.like = "",
+    this.comments = "",
+    this.shares = "",
+    this.views = "",
   });
 }
 
-List <VideoModel>videoData=[
+List<VideoModel> videoData = [
   VideoModel(
-      avatarOnpressed:() {
+      avatarOnpressed: () {
         print("avatar on pressed");
       },
       avatarimage: "assets/images/profile/img.png",
       name: "Mandeep",
       time: "8 may 2023",
       space: '.',
-      moreOnPressed: (){
+      moreOnPressed: () {
         print("more on pressed");
       },
-      cutOnPressed: (){
+      cutOnPressed: () {
         print("cut on pressed");
       },
       VideoTitle: "Glorious I Arjan Dhillon I Chobar I Brown Studios",
       videoid: "Ib1_vhZGBrM",
-      likeOnPressed: (){
+      likeOnPressed: () {
         print("like on pressed");
       },
-      commentOnpressed: (){
+      commentOnpressed: () {
         print("comment on pressed");
       },
-      sendOnpressed: (){
+      sendOnpressed: () {
         print("send on pressed");
       },
-      shareOnPressed: (){
+      shareOnPressed: () {
         print("share on pressed");
       },
       like: "1.2k",
       comments: "1.2k",
       shares: "1.2k",
-      views: "1.2k"
-  )];
+      views: "1.2k")
+];

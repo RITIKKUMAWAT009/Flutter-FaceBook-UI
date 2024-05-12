@@ -2,7 +2,6 @@ import 'package:facebook_clone/src/common/widgets/like_comment_section.dart';
 import 'package:facebook_clone/src/common/widgets/like_comment_section_2.dart';
 import 'package:facebook_clone/src/models/video_models/video_model.dart';
 import 'package:flutter/material.dart';
-// import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 class VideoScreen extends StatefulWidget {
@@ -88,6 +87,9 @@ class _VideoScreenState extends State<VideoScreen> {
                           Padding(
                             padding: const EdgeInsets.only(left: 10, top: 2.0),
                             child: InkWell(
+                              splashColor: Colors.blue,
+                              radius: 7,
+                              onTap: () {},
                               child: const Text(
                                 "Follow",
                                 style: TextStyle(
@@ -95,9 +97,6 @@ class _VideoScreenState extends State<VideoScreen> {
                                     fontWeight: FontWeight.bold,
                                     fontSize: 14),
                               ),
-                              splashColor: Colors.blue,
-                              radius: 7,
-                              onTap: () {},
                             ),
                           )
                         ],

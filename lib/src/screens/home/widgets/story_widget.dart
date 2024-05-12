@@ -21,7 +21,7 @@ class StoryWidget extends StatelessWidget {
       height: 250,
       width: 150,
       decoration: BoxDecoration(
-        image:  DecorationImage(
+        image: DecorationImage(
           image: AssetImage(image),
         ),
         color: Colors.grey.shade700,
@@ -34,18 +34,16 @@ class StoryWidget extends StatelessWidget {
       child: Stack(
         children: [
           CircularStoryIcon(backgroundImage: backgroundImage),
-           Positioned(
+          Positioned(
               bottom: 7,
               left: 5,
               child: Text(
-               name,
-                style:const TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold),
+                name,
+                style: const TextStyle(
+                    color: Colors.white, fontWeight: FontWeight.bold),
               ))
         ],
       ),
     );
   }
 }
-

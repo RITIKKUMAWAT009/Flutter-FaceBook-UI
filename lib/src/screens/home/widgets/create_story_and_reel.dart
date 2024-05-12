@@ -15,7 +15,8 @@ class CreateStoryAndReel extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          CreateStory(text: "Create story",
+          CreateStory(
+            text: "Create story",
             icon: Icons.menu_book_sharp,
             gradientColors: [
               Colors.red.shade900,
@@ -23,8 +24,9 @@ class CreateStoryAndReel extends StatelessWidget {
               Colors.red.shade900,
             ],
           ),
-          CreateStory(text: "Create reel",icon:
-          Icons.slow_motion_video_sharp,
+          CreateStory(
+            text: "Create reel",
+            icon: Icons.slow_motion_video_sharp,
             gradientColors: [
               Colors.blue.shade900,
               Colors.blue.shade300,

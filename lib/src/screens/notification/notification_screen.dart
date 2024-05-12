@@ -8,7 +8,8 @@ class NotificationScreen extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Container(color: Colors.white,
+        Container(
+          color: Colors.white,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -33,7 +34,8 @@ class NotificationScreen extends StatelessWidget {
             itemBuilder: (context, index) {
               return Column(
                 children: [
-                  ListTile(isThreeLine: true,
+                  ListTile(
+                    isThreeLine: true,
                     onTap: () {},
                     tileColor: Colors.blue.shade50,
                     leading: const Stack(
@@ -63,7 +65,9 @@ class NotificationScreen extends StatelessWidget {
                     ),
                     subtitle: const Text("3h"),
                   ),
-                  const SizedBox(height: 5,)
+                  const SizedBox(
+                    height: 5,
+                  )
                 ],
               );
             },

@@ -10,38 +10,45 @@ class FriendScreen extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          "Friends",
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10.0),
+          child: Text(
+            "Friends",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+          ),
         ),
         Row(
           children: [
             ElevatedButton(
               onPressed: () {},
-              child: Text("Friend Request"),
               style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.grey.shade200,
                   foregroundColor: Colors.black),
+              child: const Text("Friend Request"),
             ),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => YourFriendScreen(),));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const YourFriendScreen(),
+                    ));
               },
-              child: Text("Your Friend "),
               style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.grey.shade200,
                   foregroundColor: Colors.black),
+              child: const Text("Your Friend "),
             ),
           ],
         ),
-        Divider(
+        const Divider(
           thickness: 1,
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 4),
+        const Padding(
+          padding: EdgeInsets.only(top: 5.0, left: 8),
           child: Text(
             "People you may know",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
@@ -49,15 +56,17 @@ class FriendScreen extends StatelessWidget {
         ),
         Expanded(
           child: ListView.builder(
-            itemCount:15,
+            itemCount: 15,
             itemBuilder: (context, index) {
               return Padding(
-                padding: const EdgeInsets.symmetric(vertical: 5),
+                padding: const EdgeInsets.symmetric(vertical: 3),
                 child: ListTile(
-                  leading: CircleAvatar(radius: 35,
-                    backgroundImage: AssetImage("assets/images/profile/img.png"),
+                  leading: const CircleAvatar(
+                    radius: 35,
+                    backgroundImage:
+                        AssetImage("assets/images/profile/img.png"),
                   ),
-                  title: Text(
+                  title: const Text(
                     "Mandeep",
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                   ),
@@ -65,20 +74,23 @@ class FriendScreen extends StatelessWidget {
                     children: [
                       ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.blueAccent,
+                              backgroundColor: Colors.blueAccent,
                               foregroundColor: Colors.white,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10))),
                           onPressed: () {},
-                          child: Text("Add Friend")),
-                      SizedBox(width: 20,),
+                          child: const Text("Add Friend")),
+                      const SizedBox(
+                        width: 20,
+                      ),
                       ElevatedButton(
-                          style: ElevatedButton.styleFrom(backgroundColor: Colors.grey.shade200,
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.grey.shade200,
                               foregroundColor: Colors.black,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(7))),
                           onPressed: () {},
-                          child: Text("Remove")),
+                          child: const Text("Remove")),
                     ],
                   ),
                 ),
