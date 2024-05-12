@@ -1,8 +1,6 @@
 import 'package:facebook_clone/src/common/widgets/tabbar.dart';
 import 'package:flutter/material.dart';
 
-import 'src/screens/home/home_screen.dart';
-
 void main() {
   runApp(const MyApp());
 }

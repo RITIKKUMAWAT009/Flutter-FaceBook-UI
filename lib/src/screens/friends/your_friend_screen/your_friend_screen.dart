@@ -1,6 +1,9 @@
 import 'package:facebook_clone/src/common/widgets/search_filed.dart';
+import 'package:facebook_clone/src/screens/friends/friend_screen.dart';
 import 'package:flutter/material.dart';
+
 import '../../../common/widgets/custom_list_tile.dart';
+
 class YourFriendScreen extends StatelessWidget {
   const YourFriendScreen({super.key});
 
@@ -9,7 +12,9 @@ class YourFriendScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context, const FriendScreen());
+          },
           icon: const Icon(Icons.arrow_back_ios),
         ),
         title: const Text(
@@ -25,17 +30,22 @@ class YourFriendScreen extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Row(
-                children: [
-                  Text(
-                    "200",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                  ),
-                  Text(
-                    " Friends",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                  ),
-                ],
+              const Padding(
+                padding: EdgeInsets.only(left: 8.0),
+                child: Row(
+                  children: [
+                    Text(
+                      "200",
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                    Text(
+                      " Friends",
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                  ],
+                ),
               ),
               TextButton(onPressed: () {}, child: const Text("Sort"))
             ],
@@ -46,7 +56,8 @@ class YourFriendScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Column(
                   children: [
-                    const CustomListTile(
+                    CustomListTile(
+                      onTap: () {},
                       title: "Mandeep",
                       subTitle: "992499239",
                       imageUrl: "assets/images/profile/img.png",

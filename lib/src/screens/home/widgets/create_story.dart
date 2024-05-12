@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 
 class CreateStory extends StatelessWidget {
-  const CreateStory({
-    super.key,  required this.gradientColors,required this.text, required this.icon
-  });
-final  List<Color> gradientColors;
-final String text;
-final IconData icon;
+  const CreateStory(
+      {super.key,
+      required this.gradientColors,
+      required this.text,
+      required this.icon});
+
+  final List<Color> gradientColors;
+  final String text;
+  final IconData icon;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,13 +18,11 @@ final IconData icon;
       width: 150,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        gradient: LinearGradient(
-          colors: gradientColors
-        ),
+        gradient: LinearGradient(colors: gradientColors),
       ),
-      child:  Stack(
+      child: Stack(
         children: [
-           Center(
+          Center(
             heightFactor: 1.5,
             child: Icon(
               icon,
@@ -34,8 +36,7 @@ final IconData icon;
               child: Text(
                 text,
                 style: const TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w600),
+                    color: Colors.white, fontWeight: FontWeight.w600),
               )),
         ],
       ),

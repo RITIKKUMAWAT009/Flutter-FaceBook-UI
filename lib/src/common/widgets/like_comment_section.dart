@@ -21,11 +21,17 @@ class LikeCommentSection extends StatelessWidget {
               Text("13")
             ],
           ),
-
-          Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Text("1.7k comments"), SizedBox(width: 10,),
-              Text("1.4k shares"),SizedBox(width: 5,),
+              Text("1.7k comments"),
+              SizedBox(
+                width: 10,
+              ),
+              Text("1.4k shares"),
+              SizedBox(
+                width: 5,
+              ),
             ],
           ),
         ],

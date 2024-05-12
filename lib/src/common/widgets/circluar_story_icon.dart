@@ -5,6 +5,7 @@ class CircularStoryIcon extends StatelessWidget {
     super.key,
     required this.backgroundImage,
   });
+
   final String backgroundImage;
 
   @override
@@ -14,9 +15,8 @@ class CircularStoryIcon extends StatelessWidget {
       width: 50,
       padding: const EdgeInsets.all(2),
       decoration: BoxDecoration(
-          color: Colors.blue,
-          borderRadius: BorderRadius.circular(50)),
-      child:  CircleAvatar(
+          color: Colors.blue, borderRadius: BorderRadius.circular(50)),
+      child: CircleAvatar(
         backgroundImage: AssetImage(
           backgroundImage,
         ),

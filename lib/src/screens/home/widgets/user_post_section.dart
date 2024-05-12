@@ -13,7 +13,6 @@ class UserPostSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(top: 10),
-
       color: Colors.transparent,
       child: Column(
         children: [
@@ -40,32 +39,27 @@ class UserPostSection extends StatelessWidget {
                               fontWeight: FontWeight.bold, fontSize: 20),
                         ),
                         Row(
-                          mainAxisAlignment:
-                          MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
                               "Post",
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 12),
+                                  fontWeight: FontWeight.bold, fontSize: 12),
                             ),
                             Text(
                               ".",
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 12),
+                                  fontWeight: FontWeight.bold, fontSize: 12),
                             ),
                             Text(
                               "3h",
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 12),
+                                  fontWeight: FontWeight.bold, fontSize: 12),
                             ),
                             Text(
                               ".",
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 12),
+                                  fontWeight: FontWeight.bold, fontSize: 12),
                             ),
                             Icon(
                               Icons.music_note,
@@ -74,20 +68,17 @@ class UserPostSection extends StatelessWidget {
                             Text(
                               ".",
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 12),
+                                  fontWeight: FontWeight.bold, fontSize: 12),
                             ),
                             Text(
                               "Arjit Singh",
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 12),
+                                  fontWeight: FontWeight.bold, fontSize: 12),
                             ),
                             Text(
                               ".",
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 12),
+                                  fontWeight: FontWeight.bold, fontSize: 12),
                             ),
                             Icon(
                               Icons.group,
@@ -124,21 +115,19 @@ class UserPostSection extends StatelessWidget {
           ),
           const Padding(
             padding: EdgeInsets.only(top: 12.0),
-            child:
-            Image(image: AssetImage("assets/images/profile/img.png")),
+            child: Image(image: AssetImage("assets/images/profile/img.png")),
           ),
-          LikeCommentSection(),
+          const LikeCommentSection(),
           const Divider(
             thickness: 1,
           ),
-          LikeCommentSection2(),
+          const LikeCommentSection2(),
           const Divider(
-            thickness: 3,color: Colors.grey,
+            thickness: 3,
+            color: Colors.grey,
           ),
         ],
       ),
     );
   }
 }
-
-

@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+
 class FullWidthElevatedButton extends StatelessWidget {
-  const FullWidthElevatedButton({
-    super.key, required this.text,
-  });
+  const FullWidthElevatedButton(
+      {super.key, required this.text, this.onPressed});
+
   final String text;
+  final VoidCallback? onPressed;
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -16,8 +19,8 @@ class FullWidthElevatedButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(5),
             ),
             elevation: 3),
-        onPressed: () {},
-        child:  Text(text),
+        onPressed: onPressed,
+        child: Text(text),
       ),
     );
   }

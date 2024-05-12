@@ -5,6 +5,7 @@ import '../../common/widgets/custom_list_tile.dart';
 
 class MessageScreen extends StatelessWidget {
   const MessageScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,16 +25,25 @@ class MessageScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          const SearchField(hintText: "Search",),
+          const SearchField(
+            hintText: "Search",
+          ),
           Expanded(
-            child:
-            ListView.builder(
+            child: ListView.builder(
               itemCount: 30,
               itemBuilder: (context, index) {
                 return Column(
                   children: [
-                    const CustomListTile(title: "Mandeep",subTitle: "992499239",imageUrl: "assets/images/profile/img.png",),
-                    Divider(thickness: 1,color:Colors.grey.shade200,)
+                    CustomListTile(
+                      onTap: () {},
+                      title: "Mandeep",
+                      subTitle: "992499239",
+                      imageUrl: "assets/images/profile/img.png",
+                    ),
+                    Divider(
+                      thickness: 1,
+                      color: Colors.grey.shade200,
+                    )
                   ],
                 );
               },
@@ -44,5 +54,3 @@ class MessageScreen extends StatelessWidget {
     );
   }
 }
-
-

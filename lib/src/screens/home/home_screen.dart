@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+
 import 'widgets/create_story_and_reel.dart';
 import 'widgets/post_bar.dart';
 import 'widgets/story_widget.dart';
 import 'widgets/user_post_section.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({
     super.key,
@@ -61,7 +63,6 @@ class _HomeScreenState extends State<HomeScreen> {
           UserPostSection(),
           UserPostSection(),
           UserPostSection(),
-
         ],
       ),
     );

@@ -15,11 +15,14 @@ class PostBar extends StatelessWidget {
           const CircleAvatar(
             backgroundImage: AssetImage("assets/images/profile/img.png"),
           ),
-          SizedBox(height: 50,width: MediaQuery.of(context).size.width-100,
+          SizedBox(
+            height: 50,
+            width: MediaQuery.of(context).size.width - 100,
             child: const TextField(
               maxLines: 1,
               decoration: InputDecoration(
-                hintText: "Write something here",hintStyle: TextStyle(height: 1.1),
+                hintText: "Write something here",
+                hintStyle: TextStyle(height: 1.1),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(
                     Radius.circular(50),
@@ -28,7 +31,10 @@ class PostBar extends StatelessWidget {
               ),
             ),
           ),
-          const Icon(Icons.image,color: Colors.green,)
+          const Icon(
+            Icons.image,
+            color: Colors.green,
+          )
         ],
       ),
     );
